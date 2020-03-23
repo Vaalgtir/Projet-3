@@ -1,0 +1,26 @@
+@media screen and (max-width: 992px) {
+  section .menu__detail {
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section .menu__detail {
+    max-width: 40%;
+  }
+}
+section {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+section h3 {
+  margin-bottom: 1rem;
+}
+section .menu__detail {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 12px #555;
+}
+
+/*# sourceMappingURL=menu.css.map */
