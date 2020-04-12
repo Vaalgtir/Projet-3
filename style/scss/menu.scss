@@ -10,6 +10,11 @@ $backgrnd-menu4: #fdfffd;
         & .titreCateg {
             font-size: 2rem;
         }
+        & .detail, .detail--dessert {
+            margin: 0 6rem;
+            text-align: left;
+            grid-template-columns: 8fr 1fr;
+        }
     }
 }
 
@@ -19,6 +24,11 @@ $backgrnd-menu4: #fdfffd;
         margin: 2rem 10%;
         & .titreCateg {
             font-size: 1rem;
+        }
+        & .detail, .detail--dessert {
+            margin: 0 6rem;
+            text-align: left;
+            grid-template-columns: 8fr 1fr;
         }
     }
 }
@@ -30,31 +40,81 @@ $backgrnd-menu4: #fdfffd;
         & .titreCateg {
             font-size: 0.75rem;
         }
+        & .detail, .detail--dessert {
+            margin: 0 2rem;
+            text-align: center;
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .wrapperMenu {
-    text-align: center;
-    font-weight: bold;
     box-shadow: 1px 1px 12px #555;
-    & .menu__detail {
-        max-width: 100%;
-        display: block;
-        margin:0 auto;
+    & h1 {
+        text-align: center;
+        font-size: 3.2rem;
+        width: 100%;
+        padding-top: 2rem;
     }
     & .titreCateg {
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin: 2rem 0;
         & .line {
             height: 2px;
-            background-color: black;
             width: 100%;
             transform: scaleX(0);
             transform-origin: 0% 50%;
             transition: transform 400ms;
         }
+        &>div>div {
+            text-align: left;
+        }
+        &:hover .line{
+            transform: scaleX(1);
+        }
+    }
+    & .detail {
+        display: grid;
+        gap: 0.75rem;
+        font-size: 1.4rem;
+        &--dessert {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin: 0 6rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.menu1 {
+    color: #3d1319;
+    background-color: $backgrnd-menu1;
+    font-family: 'Devonshire', cursive;
+    & .detail, .detail--dessert {
+        font-family: 'Handlee', cursive;
+    }
+    & .line {
+        background-color: #3d1319;
+    }
+}
+.menu2 {
+    background-color: $backgrnd-menu2;
+    font-family: 'Merriweather', serif;
+    padding-bottom: 12rem;
+    & h1 {
+        font-family: 'Croissant One', cursive;
+        background: linear-gradient(to right,#c67412, #6e4ccc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & .titreCateg {
         &--colorFirst {
             color: #c67412;
             & .line {
@@ -88,24 +148,35 @@ $backgrnd-menu4: #fdfffd;
                 transition: transform 400ms;
             }
         }
-        &>div>div {
-            text-align: left;
-        }
-        &:hover .line{
-            transform: scaleX(1);
-        }
     }
-}
-
-.menu1 {
-    background-color: $backgrnd-menu1;
-}
-.menu2 {
-    background-color: $backgrnd-menu2;
 }
 .menu3 {
     background-color: $backgrnd-menu3;
+    font-family: 'Handlee', cursive;
+    padding-bottom: 12rem;
+    & h1 {  
+        font-family: 'Dancing Script', cursive;
+        background: -webkit-linear-gradient(left, #0228dd, #229df9);
+        background: linear-gradient(to right, #0228dd, #229df9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & .line {
+        background-color: black;
+    }
 }
 .menu4 {
     background-color: $backgrnd-menu4;
+    font-family: 'Handlee', cursive;
+    padding-bottom: 12rem;
+    & h1 {  
+        font-family: 'Kaushan Script', cursive;
+        background: -webkit-linear-gradient(left, #3d923a, #beff7f);
+        background: linear-gradient(to right, #3d923a, #beff7f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & .line {
+        background-color: black;
+    }
 }

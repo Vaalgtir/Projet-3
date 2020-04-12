@@ -5,6 +5,11 @@
   .wrapperMenu .titreCateg {
     font-size: 2rem;
   }
+  .wrapperMenu .detail, .wrapperMenu .detail--dessert {
+    margin: 0 6rem;
+    text-align: left;
+    grid-template-columns: 8fr 1fr;
+  }
 }
 @media screen and (min-width: 750px) and (max-width: 1250px) {
   .wrapperMenu {
@@ -12,6 +17,11 @@
   }
   .wrapperMenu .titreCateg {
     font-size: 1rem;
+  }
+  .wrapperMenu .detail, .wrapperMenu .detail--dessert {
+    margin: 0 6rem;
+    text-align: left;
+    grid-template-columns: 8fr 1fr;
   }
 }
 @media screen and (max-width: 750px) {
@@ -21,59 +31,33 @@
   .wrapperMenu .titreCateg {
     font-size: 0.75rem;
   }
+  .wrapperMenu .detail, .wrapperMenu .detail--dessert {
+    margin: 0 2rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
 }
 .wrapperMenu {
-  text-align: center;
-  font-weight: bold;
   box-shadow: 1px 1px 12px #555;
 }
-.wrapperMenu .menu__detail {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+.wrapperMenu h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  width: 100%;
+  padding-top: 2rem;
 }
 .wrapperMenu .titreCateg {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 .wrapperMenu .titreCateg .line {
   height: 2px;
-  background-color: black;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: 0% 50%;
-  transition: transform 400ms;
-}
-.wrapperMenu .titreCateg--colorFirst {
-  color: #c67412;
-}
-.wrapperMenu .titreCateg--colorFirst .line {
-  height: 2px;
-  background-color: #c67412;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: 0% 50%;
-  transition: transform 400ms;
-}
-.wrapperMenu .titreCateg--colorSecond {
-  color: #a56799;
-}
-.wrapperMenu .titreCateg--colorSecond .line {
-  height: 2px;
-  background-color: #a56799;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: 0% 50%;
-  transition: transform 400ms;
-}
-.wrapperMenu .titreCateg--colorThird {
-  color: #6e4ccc;
-}
-.wrapperMenu .titreCateg--colorThird .line {
-  height: 2px;
-  background-color: #6e4ccc;
   width: 100%;
   transform: scaleX(0);
   transform-origin: 0% 50%;
@@ -85,21 +69,106 @@
 .wrapperMenu .titreCateg:hover .line {
   transform: scaleX(1);
 }
+.wrapperMenu .detail {
+  display: grid;
+  gap: 0.75rem;
+  font-size: 1.4rem;
+}
+.wrapperMenu .detail--dessert {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0 6rem;
+  font-size: 1.4rem;
+}
 
 .menu1 {
+  color: #3d1319;
   background-color: #fcdfdb;
+  font-family: "Devonshire", cursive;
+}
+.menu1 .detail, .menu1 .detail--dessert {
+  font-family: "Handlee", cursive;
+}
+.menu1 .line {
+  background-color: #3d1319;
 }
 
 .menu2 {
   background-color: #fff5fe;
+  font-family: "Merriweather", serif;
+  padding-bottom: 12rem;
+}
+.menu2 h1 {
+  font-family: "Croissant One", cursive;
+  background: linear-gradient(to right, #c67412, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu2 .titreCateg--colorFirst {
+  color: #c67412;
+}
+.menu2 .titreCateg--colorFirst .line {
+  height: 2px;
+  background-color: #c67412;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 400ms;
+}
+.menu2 .titreCateg--colorSecond {
+  color: #a56799;
+}
+.menu2 .titreCateg--colorSecond .line {
+  height: 2px;
+  background-color: #a56799;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 400ms;
+}
+.menu2 .titreCateg--colorThird {
+  color: #6e4ccc;
+}
+.menu2 .titreCateg--colorThird .line {
+  height: 2px;
+  background-color: #6e4ccc;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 400ms;
 }
 
 .menu3 {
   background-color: #edefef;
+  font-family: "Handlee", cursive;
+  padding-bottom: 12rem;
+}
+.menu3 h1 {
+  font-family: "Dancing Script", cursive;
+  background: -webkit-linear-gradient(left, #0228dd, #229df9);
+  background: linear-gradient(to right, #0228dd, #229df9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu3 .line {
+  background-color: black;
 }
 
 .menu4 {
   background-color: #fdfffd;
+  font-family: "Handlee", cursive;
+  padding-bottom: 12rem;
+}
+.menu4 h1 {
+  font-family: "Kaushan Script", cursive;
+  background: -webkit-linear-gradient(left, #3d923a, #beff7f);
+  background: linear-gradient(to right, #3d923a, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu4 .line {
+  background-color: black;
 }
 
 /*# sourceMappingURL=menu.css.map */
